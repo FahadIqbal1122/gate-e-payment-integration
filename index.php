@@ -30,7 +30,7 @@ $productPrice = 1000;
     </div>
 
     <div id="payment-container" style="display: none;">
-    <iframe id="payment-iframe" src="" style="width: 100%; height: 600px;"></iframe>
+    <iframe id="payment-iframe" src="" allow="local-network-access" style="width: 100%; height: 600px;"></iframe>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

@@ -21,8 +21,9 @@ $(function() {
                 $('#error-message').text(response.message).show();
             }
         },
-        error: function() {
-            $('#error-message').text('Payment failed. Please try again.').show();
+        error: function (xhr) {
+            var msg = (xhr.responseJSON && xhr.responseJSON.message) || 'Payment failed. Please try again.';
+            $('#error-message').text(msg).show();
         },
         complete: function() {
             $('#submit-button').prop('disabled', false).text('Submit');
